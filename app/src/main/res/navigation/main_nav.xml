@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.development.travelwondama.ui.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFestivalFragment"
+            app:destination="@id/detailFestivalFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_natureTourismFragment"
+            app:destination="@id/natureTourismFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cultureTourismFragment"
+            app:destination="@id/cultureTourismFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tourPackagesFragment"
+            app:destination="@id/tourPackagesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_religiousTourismFragment"
+            app:destination="@id/religiousTourismFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_strategicFirstFragment"
+            app:destination="@id/strategicFirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.development.travelwondama.ui.main.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.development.travelwondama.ui.main.transport.TransportFragment"
+        android:label="fragment_transport"
+        tools:layout="@layout/fragment_transport" />
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.development.travelwondama.ui.main.hotel.HotelFragment"
+        android:label="fragment_hotel"
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_hotelFragment_to_detailHotelFragment"
+            app:destination="@id/detailHotelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.development.travelwondama.ui.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_auth_nav"
+            app:destination="@id/auth_nav" />
+        <action
+            android:id="@+id/action_profileFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_wishlistFragment"
+            app:destination="@id/wishlistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFestivalFragment"
+        android:name="com.development.travelwondama.ui.main.home.festival.DetailFestivalFragment"
+        android:label="fragment_detail_festival"
+        tools:layout="@layout/fragment_detail_festival" >
+        <argument
+            android:name="festival"
+            app:argType="com.development.travelwondama.domain.model.Festival" />
+    </fragment>
+    <fragment
+        android:id="@+id/natureTourismFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.nature.NatureTourismFragment"
+        android:label="fragment_nature_tourism"
+        tools:layout="@layout/fragment_nature_tourism" >
+        <action
+            android:id="@+id/action_natureTourismFragment_to_detailNatureTourismFragment"
+            app:destination="@id/detailNatureTourismFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNatureTourismFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.nature.DetailNatureTourismFragment"
+        android:label="fragment_detail_nature_tourism"
+        tools:layout="@layout/fragment_detail_nature_tourism" >
+        <argument
+            android:name="tourism"
+            app:argType="com.development.travelwondama.domain.model.Tourism" />
+    </fragment>
+    <fragment
+        android:id="@+id/cultureTourismFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.culture.CultureTourismFragment"
+        android:label="fragment_culture_tourism"
+        tools:layout="@layout/fragment_culture_tourism" >
+        <action
+            android:id="@+id/action_cultureTourismFragment_to_detailCultureTourismFragment"
+            app:destination="@id/detailCultureTourismFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCultureTourismFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.culture.DetailCultureTourismFragment"
+        android:label="fragment_detail_cultrure_tourism"
+        tools:layout="@layout/fragment_detail_cultrure_tourism" >
+        <argument
+            android:name="tourism"
+            app:argType="com.development.travelwondama.domain.model.Tourism" />
+    </fragment>
+    <fragment
+        android:id="@+id/tourPackagesFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.packages.TourPackagesFragment"
+        android:label="fragment_tour_packages"
+        tools:layout="@layout/fragment_tour_packages" >
+        <action
+            android:id="@+id/action_tourPackagesFragment_to_detailTourPackagesFragment"
+            app:destination="@id/detailTourPackagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/religiousTourismFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.religious.ReligiousTourismFragment"
+        android:label="fragment_religious_tourism"
+        tools:layout="@layout/fragment_religious_tourism" >
+        <action
+            android:id="@+id/action_religiousTourismFragment_to_detailReligiousTourismFragment"
+            app:destination="@id/detailReligiousTourismFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailReligiousTourismFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.religious.DetailReligiousTourismFragment"
+        android:label="fragment_detail_religious_tourism"
+        tools:layout="@layout/fragment_detail_religious_tourism" >
+        <argument
+            android:name="tourism"
+            app:argType="com.development.travelwondama.domain.model.Tourism" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTourPackagesFragment"
+        android:name="com.development.travelwondama.ui.main.home.tourism.packages.DetailTourPackagesFragment"
+        android:label="fragment_detail_tour_packages"
+        tools:layout="@layout/fragment_detail_tour_packages" >
+        <argument
+            android:name="tourPackages"
+            app:argType="com.development.travelwondama.domain.model.TourPackages" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailHotelFragment"
+        android:name="com.development.travelwondama.ui.main.hotel.detail.DetailHotelFragment"
+        android:label="fragment_detail_hotel"
+        tools:layout="@layout/fragment_detail_hotel" >
+        <argument
+            android:name="hotel"
+            app:argType="com.development.travelwondama.domain.model.Hotel" />
+        <action
+            android:id="@+id/action_detailHotelFragment_to_bedroomFragment"
+            app:destination="@id/bedroomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bedroomFragment"
+        android:name="com.development.travelwondama.ui.main.hotel.bedroom.BedroomFragment"
+        android:label="fragment_bedroom"
+        tools:layout="@layout/fragment_bedroom" >
+        <argument
+            android:name="bedroom"
+            app:argType="com.development.travelwondama.domain.model.BedRoom" />
+        <action
+            android:id="@+id/action_bedroomFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+        <argument
+            android:name="hotel"
+            app:argType="com.development.travelwondama.domain.model.Hotel" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.development.travelwondama.ui.main.home.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.development.travelwondama.ui.main.profile.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <argument
+            android:name="user"
+            app:argType="com.development.travelwondama.domain.model.User" />
+        <action
+            android:id="@+id/action_accountFragment_to_changeProfileFragment"
+            app:destination="@id/changeProfileFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeProfileFragment"
+        android:name="com.development.travelwondama.ui.main.profile.account.change_profile.ChangeProfileFragment"
+        android:label="fragment_change_profile"
+        tools:layout="@layout/fragment_change_profile" >
+        <argument
+            android:name="user"
+            app:argType="com.development.travelwondama.domain.model.User" />
+        <action
+            android:id="@+id/action_changeProfileFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.development.travelwondama.ui.main.profile.account.change_password.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.development.travelwondama.ui.main.profile.help.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.development.travelwondama.ui.main.profile.help.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <include app:graph="@navigation/auth_nav" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.development.travelwondama.ui.main.profile.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.development.travelwondama.ui.main.profile.wishlist.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.development.travelwondama.ui.main.hotel.booking.BookingFragment"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <argument
+            android:name="StartDate"
+            app:argType="string" />
+        <argument
+            android:name="endDate"
+            app:argType="string" />
+        <argument
+            android:name="hotel"
+            app:argType="com.development.travelwondama.domain.model.Hotel" />
+        <argument
+            android:name="bedroom"
+            app:argType="com.development.travelwondama.domain.model.BedRoom" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCultureFragment"
+        android:name="com.development.travelwondama.ui.main.home.strategic.detail.DetailCultureFragment"
+        android:label="fragment_detail_culture"
+        tools:layout="@layout/fragment_detail_culture" >
+        <argument
+            android:name="tourism"
+            app:argType="com.development.travelwondama.domain.model.Tourism" />
+    </fragment>
+    <fragment
+        android:id="@+id/strategicFirstFragment"
+        android:name="com.development.travelwondama.ui.main.home.strategic.first.StrategicFirstFragment"
+        android:label="fragment_strategic_first"
+        tools:layout="@layout/fragment_strategic_first" >
+        <argument
+            android:name="strategic"
+            app:argType="com.development.travelwondama.domain.model.Ksp" />
+        <action
+            android:id="@+id/action_strategicFirstFragment_to_detailCultureFragment"
+            app:destination="@id/detailCultureFragment" />
+    </fragment>
+</navigation>

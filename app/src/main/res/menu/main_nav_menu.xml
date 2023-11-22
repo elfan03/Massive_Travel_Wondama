@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        android:enabled="true" />
+    <item android:id="@+id/transportFragment"
+        android:title="@string/transport"
+        android:icon="@drawable/ic_flight_land"
+        android:enabled="true" />
+    <item android:id="@+id/hotelFragment"
+        android:title="@string/hotel"
+        android:icon="@drawable/ic_apartment"
+        android:enabled="true" />
+    <item android:id="@+id/mapsFragment"
+        android:title="@string/maps"
+        android:icon="@drawable/ic_map"
+        android:enabled="true" />
+</menu>

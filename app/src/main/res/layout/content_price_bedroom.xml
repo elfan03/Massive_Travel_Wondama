@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_detail_price"
+        style="@style/TextAppearance.Material3.TitleMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/detail_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_price_bedroom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/bedroom"
+        app:layout_constraintEnd_toStartOf="@+id/tv_price_bedroom_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_price" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_price_bedroom_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price_bedroom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_price_bedroom"
+        app:layout_constraintTop_toTopOf="@+id/tv_price_bedroom"
+        tools:text="Rp 500.000" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_price_admin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pajak_admin"
+        app:layout_constraintEnd_toStartOf="@+id/tv_price_admin_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price_bedroom" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_price_admin_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_price_admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_price_admin"
+        app:layout_constraintTop_toTopOf="@+id/tv_price_admin"
+        tools:text="Rp 50.000" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/total"
+        app:layout_constraintEnd_toStartOf="@+id/tv_total_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price_admin_value" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_total"
+        app:layout_constraintTop_toTopOf="@+id/tv_total"
+        tools:text="Rp 550.000" />
+</androidx.constraintlayout.widget.ConstraintLayout>

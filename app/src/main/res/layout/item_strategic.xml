@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_ksp"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintTop_toBottomOf="@id/siv_ksp"
+        app:layout_constraintStart_toStartOf="@id/siv_ksp"
+        app:layout_constraintEnd_toEndOf="@id/siv_ksp"
+        tools:text="Kawasan Strategic 1" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        style="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        tools:text="Wondama"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        style="@style/TextAppearance.Material3.BodySmall"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="@id/tv_location"
+        app:layout_constraintEnd_toEndOf="@id/tv_location"
+        tools:text="Wisata Religi"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

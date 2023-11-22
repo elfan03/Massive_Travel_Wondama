@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.hotel.bedroom.BedroomFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ToolbarColoredBackArrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <include
+            android:id="@+id/content_detail_bedroom"
+            layout="@layout/content_detail_bedroom" />
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_wishlist"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/wishlist"
+        app:icon="@drawable/baseline_add"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_view"
+        app:layout_constraintStart_toStartOf="@+id/bottom_view"
+        app:layout_constraintTop_toTopOf="@+id/bottom_view"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_select_bedroom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/booking"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_wishlist"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_view"
+        app:layout_constraintStart_toEndOf="@+id/btn_wishlist"
+        app:layout_constraintTop_toTopOf="@+id/btn_wishlist"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

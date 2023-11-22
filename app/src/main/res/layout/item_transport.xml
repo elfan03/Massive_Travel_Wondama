@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_transport"
+            android:layout_width="match_parent"
+            android:layout_height="184dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_name"
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siv_transport"
+            tools:text="KM. Gunung Dempo Ekonomi Eks Kabin Kelas 1/A" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_goal"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/goals"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            app:layout_constraintEnd_toEndOf="@+id/tv_departure_time" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_goals_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_goal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_goal"
+            app:layout_constraintTop_toTopOf="@+id/tv_goal"
+            tools:text=": Manokwari - Wasior" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_departure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/departure_time"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="4dp"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintTop_toBottomOf="@+id/tv_goal"
+            app:layout_constraintStart_toStartOf="@+id/tv_goal"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_departure_time_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintStart_toStartOf="@+id/tv_goals_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_goals_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_departure_time"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_departure_time"
+            tools:text=": Rabu, 07 September 2023 04:11"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_arrive_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time_arrives"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="4dp"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintTop_toBottomOf="@+id/tv_departure_time"
+            app:layout_constraintStart_toStartOf="@+id/tv_departure_time"
+            app:layout_constraintEnd_toEndOf="@+id/tv_departure_time"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_arrive_time_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintStart_toStartOf="@+id/tv_goals_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_goals_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_arrive_time"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_arrive_time"
+            tools:text=": Kamis, 08 September 2023 08:11"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_travel_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/travel_time"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="4dp"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintTop_toBottomOf="@+id/tv_arrive_time"
+            app:layout_constraintStart_toStartOf="@+id/tv_departure_time"
+            app:layout_constraintEnd_toEndOf="@+id/tv_departure_time"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_travel_time_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintStart_toStartOf="@+id/tv_goals_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_goals_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_travel_time"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_travel_time"
+            tools:text=": 07 Jam 01 Menit"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    style="@style/Widget.Material3.CardView.Outlined">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_choose_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/outline_calendar_month"
+        android:drawablePadding="8dp"
+        android:text="@string/choose_date"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"/>
+</com.google.android.material.card.MaterialCardView>

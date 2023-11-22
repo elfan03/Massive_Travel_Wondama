@@ -1,0 +1,23 @@
+<resources>
+    <style name="Base.Theme.TravelWondama" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondaryContainer">@color/secondaryContainer</item>
+    </style>
+
+    <style name="Theme.TravelWondama" parent="Base.Theme.TravelWondama" />
+
+    <style name="ToolbarColoredBackArrow" parent="Theme.TravelWondama">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="ThemeMaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_wondama_splash</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.TravelWondama</item>
+        <item name="windowSplashScreenBackground">@color/primary</item>
+    </style>
+</resources>
